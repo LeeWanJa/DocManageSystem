@@ -10,4 +10,5 @@ public final class Attributes
     public static final String HEIGHT = "height";
     public static final String TYPE = "type";
     public static final String AMOUNT = "amount";
+    public static final String TEXT =  "text";
 }
