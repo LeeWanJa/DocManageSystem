@@ -11,4 +11,6 @@ public final class Attributes
     public static final String TYPE = "type";
     public static final String AMOUNT = "amount";
     public static final String TEXT =  "text";
+    public static final String NAME_PREFIX = "Dear ";
+    public static final String AMOUNT_PREFIX = "Amount: ";
 }
