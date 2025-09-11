@@ -2,8 +2,7 @@ package main.java.com.jaewan.docmanagesystem.service;
 
 import main.java.com.jaewan.docmanagesystem.domain.Document;
 import main.java.com.jaewan.docmanagesystem.exception.UnknownFileTypeException;
-import main.java.com.jaewan.docmanagesystem.importing.ImageImporter;
-import main.java.com.jaewan.docmanagesystem.importing.Importer;
+import main.java.com.jaewan.docmanagesystem.importing.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,6 +18,9 @@ public class DocumentManagementSystem {
 
     public DocumentManagementSystem() {
         extensiontoImporter.put("jpg", new ImageImporter());
+        extensiontoImporter.put("letter", new LetterImporter());
+        extensiontoImporter.put("prescription", new PrescriptionImporter());
+        extensiontoImporter.put("invoice", new InvoiceImporter());
     }
 
     public void importFile(final String path) throws IOException{
